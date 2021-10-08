@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-basic.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-glass.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/7ae40850c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Med Track</title>
+    <!-- JQUERY -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-calendar/dist/bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <nav class="navbar border-bottom navbar-expand-lg">
+      <div class="container-fluid">
+        <div class="logo-wrapper">
+          <a class="navbar-brand logo dashboard-logo" href="#"
+            ><img src="images/signin/Logo.png" alt=""
+          /></a>
+        </div>
+        <div class="nav_list_button">
+          <button
+            class="nav_list_btn"
+            id="nav_list_btn"
+            onclick="toggleDashboardNav()"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div
+          class="navbar-collapse nav-searchbar d-flex justify-content-between"
+          id="navbarTogglerDemo03"
+        >
+          <input
+            class="form-control me-2 bg-light-grey w-30"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <div class="d-flex align-items-center gap-15 header-items">
+            <i class="fas fa-cog"></i>
+            <i class="fas fa-bell"></i>
+            <div
+              class="
+                f
+                header-image
+                d-flex
+                justify-content-center
+                align-items-center
+              "
+            >
+              <img
+                src="images/signin/profile picture.png"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <span class="chevron-down">
+              <span class="text-grey mr-2">Seyi Sala</span>
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main Section -->
+    <div class="dashboard-container">
+      <div class="d-flex pb-4 bg-light-grey">
+        <!-- Sidebar -->
+        <div
+          class="d-flex sticky-sidebar flex-column flex-shrink-0 p-3 text-white bg-white side-bar"
+          style="width: 260px"
+        >
+          <div onclick="toggleDashboardSidebar()" class="close-button">x</div>
+          <ul class="nav nav-pills sidebar-list pt-4 flex-column mb-5">
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link font-18 text-grey bold spacing-1"
+                aria-current="page"
+              >
+                <span class="bi me-2 mr-3 text-xs" width="16" height="16">
+                  <i class="fas fa-tachometer-alt"></i>
+                </span>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link font-18 text-grey bold spacing-1">
+                <span class="bi me-2 mr-4 text-xs" width="16" height="16">
+                  <i class="fas fa-map-marker-alt"></i>
+                </span>
+                Patients
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link font-18 text-grey bold spacing-1">
+                <span class="bi me-2 mr-4 text-xs" width="16" height="16">
+                  <i class="fas fa-calendar-check"></i>
+                </span>
+                Appointment
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link font-18 text-grey bold spacing-1">
+                <span class="bi me-2 mr-4 text-xs" width="16" height="16">
+                  <i class="fas fa-briefcase-medical"></i>
+                </span>
+                Doctors
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link font-18 text-grey bold spacing-1">
+                <span class="bi me-2 mr-4 text-xs" width="16" height="16">
+                  <i class="fas fa-wallet"></i>
+                </span>
+                Outstanding Bills
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link font-18 text-grey bold spacing-1">
+                <span class="bi me-2 mr-4 text-xs" width="16" height="16">
+                  <i class="fas fa-comments"></i>
+                </span>
+                Support
+              </a>
+            </li>
+          </ul>
+          <div
+            class="sidebar-image-section mt-5 d-flex align-items-center flex-column"
+          >
+            <div class="doc-image">
+              <img src="images/signin/Doc.png" alt="" />
+            </div>
+            <div
+              class="
+                sidebar-download
+                pink-bg-color
+                d-flex
+                flex-column
+                justify-content-center
+                align-items-center
+              "
+            >
+              <h1 class="h5 mahroon-color pb-3 bold">Get Mobile App</h1>
+              <button class="btn d-flex radius-8 align-items-center">
+                <div class="download-from-store">
+                  <img src="images/signin/app-store.png" alt="" />
+                </div>
+              </button>
+              <button class="btn d-flex align-items-center radius-8">
+                <div class="play-store">
+                  <img src="images/signin/google-play.png" alt="" />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full pt-4 pl-4 pr-4 d-flex flex-column gap-20 bg-light-grey main-center-container">
+          <div class="add-doctor-section flex-10">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex gap-15 left-button-wrap">
+                <div class="nav_list_button align-self">
+                  <button
+                    class="nav_list_btn toggle-btn"
+                    id="nav_list_btn"
+                    onclick="toggleDashboardSidebar()"
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+                <div>
+                  <h1 class="h4 mahroon-color bold text-capitalize spacing-1">
+                    hellow lagon hospital
+                  </h1>
+                  <p class="h6 mahroon-color bold text-xs text-grey spacing-1">
+                    Welcome to TrackMedRec, you have
+                    <span class="bold">3 new messages</span>
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex gap-15 align-items-center">
+                <button
+                  type="button"
+                  class="btn get-started-btn add-doctor-button"
+                >
+                  New Appoitment
+                </button>
+                <button
+                  type="button"
+                  class="btn get-started-btn add-doctor-icon"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- main section -->
+            <div class="dashboard-main-section d-flex flex-column gap-30 flex-90">
+              <div class="main-section-left d-flex gap-30 ">
+                <div class="d-flex f-70 gap-15 my-profile-card">
+                  <div class="profile-card">
+                    <div class="card h-full">
+                      <div class="card-body">
+                        <h6 class="card-title text-base bold mb-4 text-grey">
+                          My Profile
+                        </h6>
+                        <div
+                          class="
+                            d-flex
+                            justify-content-between
+                            my-profile-details
+                          "
+                        >
+                          <div class="card-text d-flex gap-20">
+                            <div
+                              class="
+                                f
+                                dashboard-card-image
+                                d-flex
+                                justify-content-center
+                                align-items-center
+                              "
+                            >
+                              <img
+                                src="images/signin/profile picture.png"
+                                class="img-fluid rounded-start"
+                                alt="..."
+                              />
+                            </div>
+                            <div>
+                              <div class="hospital-name d-flex gap-20">
+                                <h6 class="text-black bold">Seyi Syla</h6>
+                                <h1 class="h6 tmr-number text-grey bold">
+                                  TMR2027350
+                                </h1>
+                              </div>
+                              <div class="hospital-details">
+                                <p class="h6 text-grey bold">Female</p>
+                                <p class="h6 text-grey bold">27 May 1980</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div
+                              class="
+                                hospital-details
+                                d-flex
+                                flex-column
+                                justify-content-center
+                              "
+                            >
+                              <p class="h6 text-grey bold">Address</p>
+                              <h1 class="h6 bold">
+                                3. Olaleton Street, Victoria Island Extension,
+                                Oniru Lagos
+                              </h1>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="
+                            d-flex
+                            justify-content-between
+                            mt-5
+                            address-details
+                          "
+                        >
+                          <div class="card-text d-flex gap-20">
+                            <div class="d-flex gap-60 details">
+                              <div
+                                class="
+                                  hospital-name
+                                  d-flex
+                                  flex-column
+                                  gap-15
+                                "
+                              >
+                                <div>
+                                  <h6 class="text-black bold">Blood Group</h6>
+                                  <h1 class="h6 tmr-number spacing-1  bold">
+                                    O+
+                                  </h1>
+                                </div>
+                                <div>
+                                  <h6 class="text-black bold">Phone Number</h6>
+                                  <h1 class="h6 tmr-number spacing-1  bold">
+                                    0800800808
+                                  </h1>
+                                </div>
+                              </div>
+                              <div
+                                class="
+                                  hospital-details
+                                  d-flex
+                                  flex-column
+                                  gap-15
+                                "
+                              >
+                                <div>
+                                  <h6 class="text-black bold">Genotype</h6>
+                                  <h1 class="h6 tmr-number spacing-1 bold">
+                                    AA
+                                  </h1>
+                                </div>
+
+                                <div>
+                                  <h6 class="text-black bold">Allergies</h6>
+                                  <h1 class="h6 tmr-number spacing-1 bold">
+                                    Food Alergies
+                                  </h1>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div
+                              class="
+                                hospital-details
+                                d-flex
+                                flex-column
+                                justify-content-between
+                              "
+                            >
+                              <div
+                                class="d-flex justify-content-between flex-1"
+                              >
+                                <p class="h6 text-grey bold">
+                                  Primary Hospital
+                                </p>
+                                <p class="h6 text-blue cursor-pointer bold">Change</p>
+                              </div>
+                              <div class="map-image flex-1">
+                                <img src="images/signin/map.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card f-30">
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <h class="card-title spacing-1 text-grey bold">Activity</h>
+                    </div>
+                    <div class="doc-details justify-content-between mt-4">
+                      <div class="name-wrapper d-flex gap-15">
+                        <div class="initials bg-green"><i class="fas fa-envelope-open"></i></div>
+                        <div class="d-flex flex-column">
+                          <div class="doc-name bold spacing-1">
+                            Sayi Sala
+                          </div>
+                          <div class="text-grey">Cardiologist</div>
+                        </div>
+                      </div>
+                      <div class="name-wrapper d-flex gap-15 mt-3">
+                        <div class="initials bg-green"><i class="fas fa-envelope-open"></i></div>
+
+                        <div class="d-flex flex-column">
+                          <div class="doc-name bold spacing-1">
+                            Appoitment with Dr Stone
+                          </div>
+                          <div class="text-grey">Cardiologist</div>
+                        </div>
+                      </div>
+                      <div class="name-wrapper d-flex gap-15 mt-3">
+                        <div class="initials bg-green"><i class="fas fa-envelope-open"></i></div>
+
+                        <div class="d-flex flex-column">
+                          <div class="doc-name bold spacing-1">
+                            Appoitment with Dr Stone
+                          </div>
+                          <div class="text-grey">Cardiologist</div>
+                        </div>
+                      </div>
+                      <div class="name-wrapper d-flex gap-15 mt-3">
+                        <div class="initials bg-green"><i class="fas fa-envelope-open"></i></div>
+                        <div class="d-flex flex-column">
+                          <div class="doc-name bold spacing-1">
+                            Appoitment with Dr Stone
+                          </div>
+                          <div class="text-grey">Cardiologist</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="main-section-right d-flex gap-30">
+                <div class="d-flex gap-15 upcoming-events f-70">
+                  <div class="left-card">
+                    <div class="card h-full">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <h6 class="card-title spacing-1 text-grey bold">Upcoming Appoitment</h6>
+                          <h6 class="card-title text-blue">View All</h6>
+                        </div>
+                        <div
+                          class="
+                            mt-3
+                            d-flex
+                            doc-details
+                            justify-content-between
+                            text-12
+                          "
+                        >
+                          <div class="name-wrapper d-flex gap-15">
+                            <div class="initials">SS</div>
+                            <div class="d-flex flex-column">
+                              <div class="doc-name bold">Seyi Sala</div>
+                              <div class="doc-designation">Cardiologist</div>
+                            </div>
+                          </div>
+                          <div class="date-wrapper pl-5 d-flex flex-column">
+                            <div class="appitmnet-date bold">Junne 20,2021</div>
+                            <div class="appitmnet-time">09:00 am</div>
+                          </div>
+                          <div class="location-wrapper pl-5 d-flex flex-column">
+                            <div class="hospital-location bold">
+                              Lagoon Hospital
+                            </div>
+                            <div class="view-on-map text-blue">View on Map</div>
+                          </div>
+                        </div>
+                        <div
+                          class="
+                          mt-3
+                            
+                            d-flex
+                            doc-details
+                            justify-content-between
+                          "
+                        >
+                          <div class="name-wrapper d-flex gap-15">
+                            <div class="initials">SS</div>
+                            <div class="d-flex flex-column">
+                              <div class="doc-name bold">Seyi Sala</div>
+                              <div class="doc-designation">Cardiologist</div>
+                            </div>
+                          </div>
+                          <div class="date-wrapper pl-5 d-flex flex-column">
+                            <div class="appitmnet-date bold">Junne 20,2021</div>
+                            <div class="appitmnet-time">09:00 am</div>
+                          </div>
+                          <div class="location-wrapper pl-5 d-flex flex-column">
+                            <div class="hospital-location bold">
+                              Lagoon Hospital
+                            </div>
+                            <div class="view-on-map text-blue">View on Map</div>
+                          </div>
+                        </div>
+                        <div
+                          class="
+                          mt-3
+                            
+                            d-flex
+                            doc-details
+                            justify-content-between
+                          "
+                        >
+                          <div class="name-wrapper d-flex gap-15">
+                            <div class="initials">SS</div>
+                            <div class="d-flex flex-column">
+                              <div class="doc-name bold">Seyi Sala</div>
+                              <div class="doc-designation">Cardiologist</div>
+                            </div>
+                          </div>
+                          <div class="date-wrapper pl-5 d-flex flex-column">
+                            <div class="appitmnet-date bold">Junne 20,2021</div>
+                            <div class="appitmnet-time">09:00 am</div>
+                          </div>
+                          <div class="location-wrapper pl-5 d-flex flex-column">
+                            <div class="hospital-location bold">
+                              Lagoon Hospital
+                            </div>
+                            <div class="view-on-map text-blue">View on Map</div>
+                          </div>
+                        </div>
+                        <div
+                          class="
+                          mt-3
+                           
+                            d-flex
+                            doc-details
+                            justify-content-between
+                          "
+                        >
+                          <div class="name-wrapper d-flex gap-15">
+                            <div class="initials">SS</div>
+                            <div class="d-flex flex-column">
+                              <div class="doc-name bold">Seyi Sala</div>
+                              <div class="doc-designation">Cardiologist</div>
+                            </div>
+                          </div>
+                          <div class="date-wrapper pl-5 d-flex flex-column">
+                            <div class="appitmnet-date bold">Junne 20,2021</div>
+                            <div class="appitmnet-time">09:00 am</div>
+                          </div>
+                          <div class="location-wrapper pl-5 d-flex flex-column">
+                            <div class="hospital-location bold">
+                              Lagoon Hospital
+                            </div>
+                            <div class="view-on-map text-blue">View on Map</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="right-card">
+                    <div class="card h-full">
+                      <div class="card-body">
+                        <div class="d-flex">
+                          <h6 class="card-title spacing-1 text-grey bold">Upcoming Appoitment</h6>
+                        </div>
+                        <div class="mt-4 doc-details justify-content-between">
+                          <div class="name-wrapper d-flex gap-15">
+                            <div class="file-wrapper">
+                              <i class="fas fa-file-image"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="doc-name bold spacing-3">
+                                litamenXtrascan.jpg
+                              </div>
+                              <div class="text-grey">9 mb</div>
+                            </div>
+                          </div>
+                          <div class="name-wrapper d-flex gap-15 mt-3">
+                            <div class="file-wrapper">
+                              <i class="fas fa-file-image"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="doc-name bold spacing-3">
+                                litamenXtrascan.jpg
+                              </div>
+                              <div class="text-grey">9 mb</div>
+                            </div>
+                          </div>
+                          <div class="name-wrapper d-flex gap-15 mt-3">
+                            <div class="file-wrapper">
+                              <i class="fas fa-file-image"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="doc-name bold spacing-3">
+                                litamenXtrascan.jpg
+                              </div>
+                              <div class="text-grey">9 mb</div>
+                            </div>
+                          </div>
+                          <div class="name-wrapper d-flex gap-15 mt-3">
+                            <div class="file-wrapper">
+                              <i class="fas fa-file-image"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="doc-name bold spacing-3">
+                                litamenXtrascan.jpg
+                              </div>
+                              <div class="text-grey">9 mb</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card f-30">
+                  <div class="card-body tiles-list">
+                    <div class="d-flex">
+                      <h6 class="card-title spacing-1 text-grey bold">Outstanding Bill</h6>
+                    </div>
+                    <div class="mt-4 doc-details pay-hover relative justify-content-between">
+                      <div class="absolute right-0 pink-bg-color h-full w-50 pay-button">
+                        <button class="btn">Pay</button>
+                      </div>
+                      <div class="name-wrapper tile-wrapper d-flex gap-15">
+                        <div class="d-flex w-full flex-column border px-3 py-2 radius-8">
+                          <div class="doc-name bold tile-name bold spacing-1">
+                            Overdue
+                          </div>
+                          <div class="bold amount-size spacing-2 mt-1">N50000</div>
+                          <div class="text-grey due-payment">Payment due since 11 july, 2011 </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-4 doc-details pay-hover relative justify-content-between">
+                      <div class="absolute right-0 pink-bg-color h-full w-50 pay-button">
+                        <button class="btn">Pay</button>
+                      </div>
+                      <div class="name-wrapper tile-wrapper d-flex gap-15">
+                        <div class="d-flex w-full flex-column border px-3 py-2 radius-8">
+                          <div class="doc-name bold tile-name bold spacing-1">
+                            Overdue
+                          </div>
+                          <div class="bold amount-size spacing-2 mt-1">N50000</div>
+                          <div class="text-grey due-payment">Payment due since 11 july, 2011 </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-4 doc-details pay-hover relative justify-content-between">
+                      <div class="absolute right-0 pink-bg-color h-full w-50 pay-button">
+                        <button class="btn">Pay</button>
+                      </div>
+                      <div class="name-wrapper tile-wrapper d-flex gap-15">
+                        <div class="d-flex w-full flex-column border px-3 py-2 radius-8">
+                          <div class="doc-name bold tile-name bold spacing-1">
+                            Overdue
+                          </div>
+                          <div class="bold amount-size spacing-2 mt-1">N50000</div>
+                          <div class="text-grey due-payment">Payment due since 11 july, 2011 </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-4 doc-details pay-hover relative justify-content-between">
+                      <div class="absolute right-0 pink-bg-color h-full w-50 pay-button">
+                        <button class="btn">Pay</button>
+                      </div>
+                      <div class="name-wrapper tile-wrapper d-flex gap-15">
+                        <div class="d-flex w-full flex-column border px-3 py-2 radius-8">
+                          <div class="doc-name bold tile-name bold spacing-1">
+                            Overdue
+                          </div>
+                          <div class="bold amount-size spacing-2 mt-1">N50000</div>
+                          <div class="text-grey due-payment">Payment due since 11 july, 2011 </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-4 doc-details pay-hover relative justify-content-between">
+                      <div class="absolute right-0 pink-bg-color h-full w-50 pay-button">
+                        <button class="btn">Pay</button>
+                      </div>
+                      <div class="name-wrapper tile-wrapper d-flex gap-15">
+                        <div class="d-flex w-full flex-column border px-3 py-2 radius-8">
+                          <div class="doc-name bold tile-name bold spacing-1">
+                            Overdue
+                          </div>
+                          <div class="bold amount-size spacing-2 mt-1">N50000</div>
+                          <div class="text-grey due-payment">Payment due since 11 july, 2011 </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-4 doc-details pay-hover relative justify-content-between">
+                      <div class="absolute right-0 pink-bg-color h-full w-50 pay-button">
+                        <button class="btn">Pay</button>
+                      </div>
+                      <div class="name-wrapper tile-wrapper d-flex gap-15">
+                        <div class="d-flex w-full flex-column border px-3 py-2 radius-8">
+                          <div class="doc-name bold tile-name bold spacing-1">
+                            Overdue
+                          </div>
+                          <div class="bold amount-size spacing-2 mt-1">N50000</div>
+                          <div class="text-grey due-payment">Payment due since 11 july, 2011 </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    new Calendar({
+      id: "#color-calendar",
+    });
+
+    const myEvents = [
+      {
+        start: "2021-04-15T06:00:00",
+        end: "2021-04-15T20:30:00",
+        name: "Event 1",
+        url: "https://www.cssscript.com",
+        desc: "Description 1",
+        // more key value pairs here
+      },
+      {
+        start: "2021-04-16T06:00:00",
+        end: "2021-04-16T20:30:00",
+        name: "Event 2",
+        url: "https://www.cssscript.com",
+      },
+      {
+        start: "2021-04-16T06:00:00",
+        end: "2021-04-17T20:30:00",
+        name: "Event 3",
+        url: "https://www.cssscript.com",
+      },
+    ];
+  </script>
+  <script src="js/main.js"></script>
+</html>

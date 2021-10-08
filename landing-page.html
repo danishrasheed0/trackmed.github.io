@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Owl CSS FIle -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- THEME STYLE OWL -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/7ae40850c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Med Track</title>
+
+    <!-- JQUERY -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- OWL Script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg fixed-top landing-nav">
+      <div class="container-xl">
+        
+        <a class="navbar-brand logo landing-logo d-flex justify-content-center align-items-center" href="#"
+          ><img src="images/signin/Logo.png" alt=""
+        /></a>
+        <div class="nav_list_button">
+          <button class="nav_list_btn" id="nav_list_btn" onclick="myfunction()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse d-flex justify-content-between"
+        id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto ml-4 mb-2 mb-lg-0">
+          <li class="navbar-item mr-4">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="navbar-item mr-4">
+            <a class="nav-link" aria-current="page" href="#">Abous Us</a>
+          </li>
+          <li class="navbar-item mr-4">
+            <a class="nav-link" aria-current="page" href="#">How it Works</a>
+          </li>
+          <li class="navbar-item mr-4">
+            <a class="nav-link" aria-current="page" href="#">FQAs</a>
+          </li>
+          <li class="navbar-item mr-4">
+            <a class="nav-link" aria-current="page" href="#">Contach</a>
+          </li>
+        </ul>
+        <form class="d-flex nav-buttons">
+          <a href="dashboard.html">
+            <button type="button" class="btn navbar-signin-btn">Signin</button>
+          </a>
+          <button type="button" class="btn get-started-btn">Get Started</button>
+        </form>
+      </div>
+      
+    </nav>
+    <!-- Banner -->
+
+    <section
+      class="banner-container d-flex justify-content-center align-items-center"
+    >
+      <div
+        class="
+          d-flex
+          banner-wrapper
+          flex-column
+          justify-content-center
+          align-items-center
+        "
+      >
+        <h1 class="display-4 bold text-uppercase mt-5 pt-3">
+          bringing the future of healthcare
+        </h1>
+        <p class="h5 text-capitalize font-600 mt-3">
+          Over 100 specilist doctor are ready to attend to pay anywhere,anytime
+          fast and east access to a better healthcare services
+        </p>
+        <button class="btn bold mt-5">Get Started</button>
+      </div>
+    </section>
+    <!-- Solutions sections -->
+    <section
+      class="
+        min-view-height
+        container
+        d-flex
+        flex-column
+        align-items-center
+        mb-5
+      "
+    >
+      <h1 class="display-6 font-600 mahroon-color mt-5 pt-5 easy-steps">
+        3 easy steps to get your solutions
+      </h1>
+      <div class="solutions-container d-flex mt-5">
+        <div class="solution d-flex flex-column align-items-center">
+          <div class="d-flex justify-content-center">
+            <img class="w-80" src="./images/signin/solution1.png" alt="" />
+          </div>
+          <h1 class="h5 mt-4 bold">Find A Hospital</h1>
+          <h1 class="h6 w-80 mt-3 text-center line-height text-grey font-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nemo
+            numquam aut voluptatem debitis enim perferendis atque.
+          </h1>
+        </div>
+        <div class="solution d-flex flex-column align-items-center">
+          <div class="d-flex justify-content-center">
+            <img class="w-80" src="./images/signin/solution1.png" alt="" />
+          </div>
+          <h1 class="h5 mt-4 bold">Schedule Appointment</h1>
+          <h1 class="h6 w-80 mt-3 text-center line-height text-grey font-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nemo
+            numquam aut voluptatem debitis enim perferendis atque.
+          </h1>
+        </div>
+        <div class="solution d-flex flex-column align-items-center">
+          <div class="d-flex justify-content-center">
+            <img class="w-80" src="./images/signin/solution1.png" alt="" />
+          </div>
+          <h1 class="h5 mt-4 bold">Get Your Solutions</h1>
+          <h1 class="h6 w-80 mt-3 text-center line-height text-grey font-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nemo
+            numquam aut voluptatem debitis enim perferendis atque.
+          </h1>
+        </div>
+      </div>
+    </section>
+    <!-- Why Use track Med -->
+    <section class=" pink-bg-color d-flex flex-column">
+      <div class="container-xl">
+        <h1 class="display-6 font-600 mahroon-color mt-5 pt-5 text-center why-use-text">
+          Why use TrackMedRec?
+        </h1>
+        <div class="d-flex mt-5 points-of-usage">
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="number mahroon-color bold mr-4">01</div>
+            <div class="w-80 bold h6 point-item">
+              Over 100 specilist doctor are ready to attend to pay anywhere.
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="number mahroon-color bold mr-4">02</div>
+
+            <div class="w-80 bold h6 point-item">
+              Over 100 specilist doctor are ready to attend to pay anywhere.
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="number mahroon-color bold mr-4">03</div>
+
+            <div class="w-80 bold h6 point-item">
+              Over 100 specilist doctor are ready to attend to pay anywhere.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-5 d-flex px-5 container-xl download-on-mobile">
+        <div
+          class="flex-1 d-flex gap-30 justify-content-center flex-column"
+        >
+          <h1 class="h2 w-80 text-uppercase bold mahroon-color available-text">
+            We are available on mobile, just download it
+          </h1>
+          <h1 class="h5 w-80 text-grey bold download-description">
+            Over 100 specilist doctor are ready to attend to pay
+            anywhere,anytime fast and east access to a better healthcare
+            services Over 100 specilist doctor are ready to attend to pay
+            anywhere,anytime fast and east access to a better healthcare
+            services
+          </h1>
+          <div class="d-flex">
+            <button class="btn d-flex radius-8 align-items-center">
+              <div class="download-from-store">
+                <img src="images/signin/app-store.png" alt="" />
+              </div>
+            </button>
+            <button class="btn d-flex align-items-center radius-8">
+              <div class="play-store">
+                <img src="images/signin/google-play.png" alt="" />
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="
+            flex-1
+            d-flex
+            justify-content-center
+            align-items-center
+            view-height
+          "
+        >
+          <img
+            class="mobile-section-image"
+            src="images/signin/mobile-section.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- user reviews section -->
+    <section class="container slider-section min-view-height">
+      <div>
+        <h1
+          class="
+            h2
+            pt-5
+            mt-5
+            text-capitalize
+            font-600
+            mahroon-color
+            text-center
+          "
+        >
+          Check out recent user reviews
+        </h1>
+        <div class="owl-carousel owl-theme px-2 mt-5">
+          <div class="item">
+            <div class="card shadow-normal mb-3">
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center pl-3">
+                  <div
+                    class="
+                      user-image
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                      mt-4
+                    "
+                  >
+                    <img
+                      src="images/signin/profile picture.png"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div
+                    class="
+                      user-details
+                      d-flex
+                      justify-content-center
+                      flex-column
+                      pl-4
+                    "
+                  >
+                    <div class="user-name bold">Sharon Stone</div>
+                    <div class="user-designation bold text-grey">
+                      CEO of Company
+                    </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="card-body">
+                    <h5 class="card-title bold">Awesom Experiense</h5>
+                    <p class="card-text text-grey font-600">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Fuga placeat natus accusamus, praesentium magnam
+                      doloremque accusantium! Nisi inventore minus, dolorem
+                      numquam eveniet quidem dolorum dolor?
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted"
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i
+                      ></small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card shadow-normal mb-3">
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center pl-3">
+                  <div
+                    class="
+                      user-image
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                      mt-4
+                    "
+                  >
+                    <img
+                      src="images/signin/profile picture.png"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div
+                    class="
+                      user-details
+                      d-flex
+                      justify-content-center
+                      flex-column
+                      pl-4
+                    "
+                  >
+                    <div class="user-name bold">Sharon Stone</div>
+                    <div class="user-designation bold text-grey">
+                      CEO of Company
+                    </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="card-body">
+                    <h5 class="card-title bold">Awesom Experiense</h5>
+                    <p class="card-text text-grey font-600">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Fuga placeat natus accusamus, praesentium magnam
+                      doloremque accusantium! Nisi inventore minus, dolorem
+                      numquam eveniet quidem dolorum dolor?
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted"
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i
+                      ></small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card shadow-normal mb-3">
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center pl-3">
+                  <div
+                    class="
+                      user-image
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                      mt-4
+                    "
+                  >
+                    <img
+                      src="images/signin/profile picture.png"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div
+                    class="
+                      user-details
+                      d-flex
+                      justify-content-center
+                      flex-column
+                      pl-4
+                    "
+                  >
+                    <div class="user-name bold">Sharon Stone</div>
+                    <div class="user-designation bold text-grey">
+                      CEO of Company
+                    </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="card-body">
+                    <h5 class="card-title bold">Awesom Experiense</h5>
+                    <p class="card-text text-grey font-600">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Fuga placeat natus accusamus, praesentium magnam
+                      doloremque accusantium! Nisi inventore minus, dolorem
+                      numquam eveniet quidem dolorum dolor?
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted"
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i
+                      ></small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 
+      <div class="mt-4 d-flex gap-5 justify-content-center">
+        <div class="slider-item bg-mahroon"></div>
+        <div class="slider-item"></div>
+        <div class="slider-item"></div>
+        <div class="slider-item"></div>
+      </div> -->
+    </section>
+
+    <!-- Contact Us Section -->
+
+    <section class=" bg-grey min-view-height">
+      <div class="container d-flex flex-column gap-60">
+        <div class="text-center">
+          <h1 class="h2  mt-5 text-capitalize font-600 mahroon-color">
+            Contact us
+          </h1>
+          <h1 class="h6 bold spacing-1 pt-2 text-grey">
+            Get in touch with us and let us know how we can help
+          </h1>
+        </div>
+
+        <div class="bg-white shadow-normal mx-5 mb-5 p-5">
+          <form>
+            <h1 class="h4 pb-3 text-uppercase spacing-1 font-600 mahroon-color">
+              Send Us a message
+            </h1>
+            <div class="d-flex gap-30 mb-3">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control form-text-field"
+                  placeholder="Full Name"
+                  aria-label="Full Name"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control form-text-field"
+                  placeholder="Email Address"
+                  aria-label="Email Address"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+            </div>
+
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control form-text-field"
+                placeholder="Message"
+                aria-label="Message"
+                aria-describedby="basic-addon2"
+              />
+            </div>
+            <button type="submit" class="btn bg-mahroon text-white bg mt-3">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <section class="pink-bg-color">
+      <div class="container mahroon-color ">
+        <footer class="pt-5 pb-2 border-top">
+          <div class="d-flex footer-container">
+            <div class="flex-1 ">
+              <h1
+                class="h4 w-80 pb-3 text-uppercase spacing-1 bold mahroon-color"
+              >
+                TrackMedRec
+              </h1>
+              <h1 class="h6 w-80 font-600">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                mollitia sit qui. Assumenda cum deleniti impedit sunt rem
+                expedita, unde eveniet, laudantium
+              </h1>
+              <div class="social-links mt-4">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex-1 nowrap d-flex gap-60 useful-links">
+              <div class="text-uppercase spacing-1 mahroon-color">
+                <h1 class="h6 mb-3 bold">About Us</h1>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">Companey Overview</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">Term of Use</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">Privacy Policy</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">Careers</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="text-uppercase spacing-1">
+                <h1 class="h6 mb-3 bold">Useful links</h1>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">Home</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">About</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">how it works</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">FAQs</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">Contact</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="spacing-1">
+                <h1 class="h6 mb-3 bold">Contact</h1>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0"
+                      >Email: info@ng.lopworks.com</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0"
+                      >Phone: +234 803 235 9265</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">Pricing</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">FAQs</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">About</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <p class="pl-2">&copy; TrackMedRec Limited</p>
+        </footer>
+      </div>
+    </section>
+
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
